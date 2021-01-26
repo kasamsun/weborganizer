@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>เพิ่มตาราง</title>
+<link href="/include/style.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+</head>
+<body>
+<br>
+<table width="340" border="0" align="center" cellpadding="0" cellspacing="0">
+<col width=70><col width=100><col width=100><col width=70>
+<tr>
+	<td style="border-bottom: black solid 1px;">&nbsp;</td>
+	<td><div unselectable="off" id="tab1"
+		onclick="tab1.style.borderBottom = 'white solid 1px';tab2.style.borderBottom = 'black solid 1px';idInsertTable.style.display='block';idEditTable.style.display='none';" 
+		align="center"
+		style="border-top: black solid 1px; border-left: black solid 1px; border-right: black solid 1px;cursor:hand;"> 
+        <b>Create Table</b></div></td>
+	<td><div unselectable="off" id="tab2"
+		align="center"
+		style="border-top: black solid 1px; border-right: black solid 1px ;border-bottom: black solid 1px;cursor:hand;">
+		<b>Edit Table</b></div></td>
+	<td style="border-bottom: black solid 1px;">&nbsp;</td>
+</tr>
+<tr>
+	<td colspan=4 align=center style="border-left: black solid 1px;border-right: black solid 1px;border-bottom: black solid 1px;">
+
+		<div id="idInsertTable">
+		<table style="table-layout:fixed" width=320><col width=160><col width=160>
+		<tr><td align=right>Rows :</td>
+			<td><INPUT type="text" id=inpRows name=inpRows size=6 value=2 class="box1"></td></tr>
+		<tr><td align=right>Columns :</td>
+			<td><INPUT type="text" id=inpCols name=inpCols size=6 value=2 class="box1"></td></tr>
+		<tr><td align=right>Cell Padding :</td>
+			<td><INPUT type="text" id=inpPadding name=inpPadding size=6 value=0 class="box1"></td></tr>
+		<tr><td align=right>Cell Spacing :</td>
+			<td><INPUT type="text" id=inpSpacing name=inpSpacing size=6 value=0 class="box1"></td></tr>
+		<tr><td align=right>Border Width :</td>
+			<td><INPUT type="text" id=inpBorder name=inpBorder size=6 value=1 class="box1"></td></tr>
+		<tr><td align=right>Border Color :</td>
+			<td><INPUT type="text" id=inpBorderColor name=inpBorderColor size=6 value="#000000" class="box1"></td></tr>
+		<tr><td align=right>Background Image URL :</td>
+			<td><INPUT type="text" id=inpBgImage name=inpBgImage size=12 class="box1"></td></tr>
+		<tr><td align=right>Background Color :</td>
+			<td><INPUT type="text" id=inpBgColor name=inpBgColor size=6 class="box1"></td></tr>
+		<tr><td align=right><input type="button" value="Insert Table" id=btnInsert2 name=btnInsert class="box1">
+            </td>
+			<td><input type="button" value="Cancel" onClick="window.close();" id=button13 name=button1 class="box1"></td>
+          </tr>
+		</table>
+		</div>
+
+		<div id="idEditTable" style="display:none">
+		<table style="table-layout:fixed" width=320><col width=160><col width=160>
+		<tr><td align=right>Rows :</td>
+			<td><INPUT type="button" value="Insert Row" id=btnInsRow name=btnInsRow class="box1"></td></tr>
+		<tr><td align=right>Columns :</td>
+			<td><INPUT type="button" value="Insert Column" id=btnInsCol name=btnInsCol class="box1"></td></tr>
+		<tr><td align=right>Cell Padding :</td>
+			<td><INPUT type="text" id=inpPadding2 name=inpPadding2 size=6 value=0 class="box1"></td></tr>
+		<tr><td align=right>Cell Spacing :</td>
+			<td><INPUT type="text" id=inpSpacing2 name=inpSpacing2 size=6 value=0 class="box1"></td></tr>
+		<tr><td align=right>Border Width :</td>
+			<td><INPUT type="text" id=inpBorder2 name=inpBorder2 size=6 value=1 class="box1"></td></tr>
+		<tr><td align=right>Border Color :</td>
+			<td><INPUT type="text" id=inpBorderColor2 name=inpBorderColor2 size=6 value="#000000" class="box1"></td></tr>
+		<tr><td align=right>Background Image URL :</td>
+			<td><INPUT type="text" id=inpBgImage2 name=inpBgImage2 size=12 class="box1"></td></tr>
+		<tr><td align=right>Background Color :</td>
+			<td><INPUT type="text" id=inpBgColor2 name=inpBgColor2 size=6 class="box1"></td></tr>
+		<tr><td align=right><input type="button" value="Update Table" id=btnUpdate name=btnUpdate class="box1">
+            </td>
+			<td><input type="button" value="Cancel" onClick="window.close();" id=button12 name=button12 class="box1"></td>
+          </tr>
+		</table>
+		</div>
+
+	</td>
+</tr>
+</table>
+
+<script>
+function TabEditTable()
+	{
+	tab1.style.borderBottom = "black solid 1px";
+	tab2.style.borderBottom = "white solid 1px";
+	idInsertTable.style.display="none";
+	idEditTable.style.display="block";
+	}
+function TabInsertTable()
+	{
+	tab1.style.borderBottom = "white solid 1px";
+	tab2.style.borderBottom = "black solid 1px";
+	idInsertTable.style.display="block";
+	idEditTable.style.display="none";	
+	}	
+</script>
+
+<SCRIPT LANGUAGE=JavaScript FOR=btnInsRow EVENT=onclick>
+	var arr = new Array();
+	arr["action"] = "insrow"
+	window.returnValue = arr;
+	window.close();
+</SCRIPT>
+
+<SCRIPT LANGUAGE=JavaScript FOR=btnInsCol EVENT=onclick>
+	var arr = new Array();
+	arr["action"] = "inscol"
+	window.returnValue = arr;
+	window.close();
+</SCRIPT>
+
+<SCRIPT LANGUAGE=JavaScript FOR=btnInsert EVENT=onclick>
+	var arr = new Array();
+	arr["action"] = "insert"
+	arr["rows"] = inpRows.value
+	arr["cols"] = inpCols.value
+  	arr["cellPadding"] = inpPadding.value
+  	arr["cellSpacing"] = inpSpacing.value
+  	arr["border"] = inpBorder.value
+  	arr["borderColor"] = inpBorderColor.value
+  	arr["background"] = inpBgImage.value
+  	arr["bgColor"] = inpBgColor.value	
+	window.returnValue = arr;
+	window.close();
+</SCRIPT>
+
+<SCRIPT LANGUAGE=JavaScript FOR=btnUpdate EVENT=onclick>
+	var arr = new Array();
+	arr["action"] = "update"
+  	arr["cellPadding"] = inpPadding2.value
+  	arr["cellSpacing"] = inpSpacing2.value
+  	arr["border"] = inpBorder2.value
+  	arr["borderColor"] = inpBorderColor2.value
+  	arr["background"] = inpBgImage2.value
+  	arr["bgColor"] = inpBgColor2.value	
+	window.returnValue = arr;
+	window.close();
+</SCRIPT>
+
+<SCRIPT LANGUAGE=JavaScript FOR=window EVENT=onload>
+if(window.dialogArguments["EditTable"])
+	{
+	//Create & Edit
+	for ( elem in window.dialogArguments )
+		{
+	    switch( elem )
+			{
+			case "cellPadding":
+				inpPadding2.value = window.dialogArguments["cellPadding"];
+				break;
+			case "cellSpacing":
+				inpSpacing2.value = window.dialogArguments["cellSpacing"];
+				break;
+			case "border":
+				inpBorder2.value = window.dialogArguments["border"];
+				break;
+			case "borderColor":
+				inpBorderColor2.value = window.dialogArguments["borderColor"];
+				break;
+			case "background":
+				inpBgImage2.value = window.dialogArguments["background"];
+				break;
+			case "bgColor":
+				inpBgColor2.value = window.dialogArguments["bgColor"];
+				break;			
+			}
+		}
+	
+	tab2.style.cursor = "hand"
+	tab2.innerHTML = "<b><span onclick='TabEditTable()'>Edit Table</span></b>"
+	}
+else
+	{
+	//Create
+	tab2.style.cursor = ""
+	tab2.innerHTML = "<b><font color=lightgrey>Edit Table</font></b>"
+	}
+</SCRIPT>
+
+</body>
+</html>

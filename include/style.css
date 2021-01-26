@@ -1,0 +1,96 @@
+body {
+	margin: 0px  0px;
+	padding: 0px  0px;
+	font-family: "MS Sans Serif";
+	font-size: 20px;
+	color: #666666;
+	background-image: url(../images/main_background.gif);
+}
+a:link {
+	color: #003399;
+	text-decoration: none;
+}
+a:visited { color: #003399; text-decoration: none}
+a:active { }
+a:hover { text-decoration:underline  }
+.text {
+	font-family: "MS Sans Serif", "Microsoft Sans Serif";
+	font-size: 10px;
+	color: #000066;
+}
+td {
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size: 10px;
+	color: #666666;
+}
+.redtext {
+	color: #FF0000;
+	font-size: 16px;
+	font-weight: bold;
+}
+.text1 {
+	color: #000066;
+	font-size: 10px;
+	font-weight: bold;
+}
+.text2 {
+	color: #ffffff;
+	font-size: 10px;
+	font-weight: bold;
+}
+.text3 {
+	color: #999999;
+	font-size: 10px;
+	font-weight: bold;
+}
+.largetext {
+	font-size: 18px;
+	font-weight: bold;
+}
+.cal {
+	color: #ffffff;
+	font-size: 10px;
+	font-weight: bold;
+}
+.calBgColor {
+	background-color:#4682b4;
+}
+.calDaysColor {
+	background-color:#87cefa;
+}
+.calWeekend {
+	background-color: #dbeaf5;
+}
+.calHighlightColor {
+	background-color:#FF99CC;
+}
+input
+{
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size:10px;
+	color:#003366;
+}
+select
+{
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size:10px;
+	color:#003366;
+}
+textarea
+{
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size:10px;
+	color:#003366;
+}
+.Cbody {	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: MS Sans Serif
+}
+.Cbodyh {	FONT-SIZE: 10px; COLOR: #606060; FONT-FAMILY: MS Sans Serif
+}
+.Ccur {	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: MS Sans Serif
+}
+.Cheader {	FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: MS Sans Serif
+}
+.Cheader2 {	FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: MS Sans Serif
+}
+.Cwe {	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: MS Sans Serif
+}
